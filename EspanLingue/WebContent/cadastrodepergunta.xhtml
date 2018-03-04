@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<title>Cadastro de questões</title>
+</h:head>
+<h:body>
+
+	<h:form>
+		<p>Cadastro de perguntas</p>
+		<h:panelGrid id="grid" columns="2">
+
+			<h:outputLabel value="Enunciado:" />
+			<h:inputText value="#{novaPerguntaMg.questoes.enunciado}"
+				required="true" />
+
+			<h:outputLabel value="Nível:" />
+			<h:inputText value="#{novaPerguntaMg.questoes.nivel}" required="true" />
+
+			<h:outputLabel value="Alternativa A: " />
+			<h:inputText value="#{novaPerguntaMg.questoes.alternativaA}"
+				required="true" />
+
+			<h:outputLabel value="Alternativa B: " />
+			<h:inputText value="#{novaPerguntaMg.questoes.alternativaB}"
+				required="true" />
+
+			<h:outputLabel value="Alternativa C: " />
+			<h:inputText value="#{novaPerguntaMg.questoes.alternativaC}"
+				required="true" />
+
+			<h:outputLabel value="Alternativa D: " />
+			<h:inputText value="#{novaPerguntaMg.questoes.alternativaD}"
+				required="true" />
+
+			<h:outputLabel value="Gabarito" />
+			<h:selectOneRadio value="#{novaPerguntaMg.questoes.gabarito}">
+				<f:selectItem itemLabel="A" itemValue="A" />
+				<f:selectItem itemLabel="B " itemValue="B" />
+				<f:selectItem itemLabel="C" itemValue="C" />
+				<f:selectItem itemLabel="D" itemValue="D " />
+			</h:selectOneRadio>
+
+			<h:commandButton actionListener="#{novaPerguntaMg.cadastrarQuestao}"
+				value="Enviar" />
+		</h:panelGrid>
+	</h:form>
+</h:body>
+</html>

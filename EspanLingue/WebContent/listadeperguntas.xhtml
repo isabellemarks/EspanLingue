@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head></h:head>
+<body>
+	<h1>EspanLingue | Administrador</h1>
+
+	<h:form>
+		<p:dataTable var="questoes" value="#{questoesBean.resultados}">
+			<p:column headerText="Id">
+				<h:outputText value="#{questoes.id}" />
+			</p:column>
+
+			<p:column headerText="Enunciado">
+				<h:outputText value="#{questoes.enunciado}" />
+			</p:column>
+
+			<p:column headerText="Aternativa A">
+				<h:outputText value="#{questoes.alternativaA}" />
+			</p:column>
+
+			<p:column headerText="Aternativa B">
+				<h:outputText value="#{questoes.alternativaB}" />
+			</p:column>
+			<p:column headerText="Aternativa C">
+				<h:outputText value="#{questoes.alternativaC}" />
+			</p:column>
+			<p:column headerText="Aternativa D">
+				<h:outputText value="#{questoes.alternativaD}" />
+			</p:column>
+
+			<p:column headerText="Nivel">
+				<h:outputText value="#{questoes.nivel}" />
+			</p:column>
+
+			<p:column headerText="Gabarito">
+				<h:outputText value="#{questoes.gabarito}" />
+			</p:column>
+
+
+		</p:dataTable>
+	</h:form>
+
+</body>
+</html>

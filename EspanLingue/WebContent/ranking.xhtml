@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head></h:head>
+<body>
+	<h1>EspanLingue | Jogador</h1>
+	<h:form>
+		<p:dataTable var="ranking" value="#{rankingBean.resultados_jogador}">
+			<p:column headerText="Nome">
+				<h:outputText value="#{ranking.nome}" />
+			</p:column>
+
+			<p:column headerText="Pontos">
+				<h:outputText value="#{ranking.pontos}" />
+			</p:column>
+
+
+
+
+		</p:dataTable>
+	</h:form>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head></h:head>
+<body>
+	<h1>EspanLingue | Jogador</h1>
+
+	<h:outputText value="#{questoesBean.questao.enunciado}" />
+	<h:form >
+	<h:selectOneRadio value="#{questoesBean.alternativa}">
+		<f:selectItem itemLabel="#{questoesBean.questao.alternativaA}" itemValue="a" />
+		<f:selectItem itemLabel="#{questoesBean.questao.alternativaB}" itemValue="b" />
+		<f:selectItem itemLabel="#{questoesBean.questao.alternativaC}" itemValue="c" />
+		<f:selectItem itemLabel="#{questoesBean.questao.alternativaD}" itemValue="d" />
+	</h:selectOneRadio>
+	
+	
+	<h:commandButton value="Enviar" action = "#{questoesBean.enviar}"/>
+		</h:form>
+</body>
+</html>
